@@ -89,7 +89,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             <button onClick={() => dispatch({ type: 'SET_VIEW', payload: 'privacy' })} className="text-ctj-silver hover:text-ctj-platinum focus-ring rounded">Privacy</button>
           </div>
           <div className="md:text-right text-ctj-muted">
-            <div>Candidate version {APP_VERSION}</div>
+            <div>Version {APP_VERSION}</div>
             <div>© {new Date().getFullYear()} Sonly Consulting</div>
           </div>
         </div>
