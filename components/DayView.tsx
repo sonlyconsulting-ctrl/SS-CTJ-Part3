@@ -63,7 +63,7 @@ export const DayView: React.FC = () => {
             <p className="text-sm text-ctj-silver mt-2">{day.framework}</p>
           </div>
           <div className="rounded-xl border border-ctj-gold/30 bg-ctj-gold/10 p-4">
-            <p className="text-xs uppercase tracking-wider text-ctj-gold flex items-center gap-2"><Lightbulb size={14} /> Action Tip</p>
+            <p className="text-xs uppercase tracking-wider text-ctj-gold flex items-center gap-2"><Lightbulb size={14} /> Clarity Tip</p>
             <p className="text-sm text-ctj-silver mt-2">{day.logicTip}</p>
           </div>
         </div>
