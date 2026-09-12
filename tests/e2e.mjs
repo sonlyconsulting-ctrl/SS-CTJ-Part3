@@ -44,7 +44,7 @@ for (let day = 1; day <= 10; day += 1) {
   const coreIds = ['d' + day + '-map', 'd' + day + '-p1', 'd' + day + '-p2', 'd' + day + '-p3'];
   for (const id of coreIds) {
     await page.getByTestId('response-' + id).fill(
-      'Day ' + day + ' response for ' + id + ': I define the hypothesis, evidence, alternative explanation, action, result, and what would make me revise the next move.'
+      'Day ' + day + ' response for ' + id + ': I name the mindset, emotion, values, assumptions, available action, and what would make me revisit the choice.'
     );
   }
 
@@ -54,7 +54,7 @@ for (let day = 1; day <= 10; day += 1) {
   if (day === 5 || day === 10) {
     record('Checkpoint after Day ' + day + ' renders', await page.getByTestId('checkpoint-view').isVisible());
     await page.getByTestId('checkpoint-response').fill(
-      'Checkpoint after Day ' + day + ': the most useful change is treating action as a source of evidence, keeping tests bounded, and revising the next move when results differ from the expectation.'
+      'Checkpoint after Day ' + day + ': the most useful change is making mindset, emotion, values, boundaries, and revision conditions visible before acting.'
     );
     record('Checkpoint after Day ' + day + ' enables continue', await page.getByTestId('checkpoint-continue').isEnabled());
     await page.getByTestId('checkpoint-continue').click();
@@ -64,7 +64,7 @@ for (let day = 1; day <= 10; day += 1) {
 record('Final reflection renders after Day 10 checkpoint', await page.getByTestId('final-view').isVisible());
 
 await page.getByTestId('final-reflection').fill(
-  'My biggest Part 3 insight is that useful movement comes from small experiments that create evidence, reveal assumptions, and make the next decision more informed.'
+  'My biggest Part 3 insight is that meaning and balance become more practical when I can connect emotion, values, boundaries, and deliberate action without pretending purpose is fixed.'
 );
 
 record('Final reflection enables completion', await page.getByTestId('final-continue').isEnabled());
