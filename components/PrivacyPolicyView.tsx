@@ -12,7 +12,7 @@ export const PrivacyPolicyView: React.FC = () => {
       </button>
 
       <div>
-        <p className="text-xs uppercase tracking-[0.22em] text-ctj-gold">Candidate Build</p>
+        <p className="text-xs uppercase tracking-[0.22em] text-ctj-gold">Local Browser Version</p>
         <h1 className="text-4xl font-semibold mt-2">Privacy Boundary</h1>
         <p className="text-ctj-muted mt-2">Product-core baseline, September 2026.</p>
       </div>
@@ -20,7 +20,7 @@ export const PrivacyPolicyView: React.FC = () => {
       <section className="panel-platinum">
         <h2 className="text-xl font-semibold">What this build stores</h2>
         <p className="text-ctj-silver mt-3 leading-relaxed">
-          Part 3 responses, checkpoint reflections, completion progress, final reflection, and display settings are stored in browser LocalStorage. This candidate runtime has no account backend, cloud journal storage, analytics, or external AI model connection.
+          Part 3 responses, checkpoint reflections, completion progress, final reflection, and display settings are stored in browser LocalStorage. This local version has no account backend, cloud journal storage, analytics, or external AI model connection.
         </p>
       </section>
 
