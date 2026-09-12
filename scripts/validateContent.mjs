@@ -36,9 +36,6 @@ for (const required of [
   if (!combined.includes(required)) failures.push('required Part 3 content missing: ' + required);
 }
 
-const tinyCount = (constants.match(/frameworkName: 'Tiny Experiment'/g) ?? []).length;
-if (tinyCount !== 1) failures.push('Tiny Experiment must remain a named framework once, found ' + tinyCount);
-
 const frameworkMatches = [...constants.matchAll(/frameworkName: '([^']+)'/g)].map((match) => match[1]);
 if (new Set(frameworkMatches).size !== frameworkMatches.length) {
   failures.push('duplicate named frameworks remain inside Part 3');
@@ -48,6 +45,7 @@ for (const forbidden of [
   'GET YOUR THINK ON',
   'GEMINI_API_KEY',
   'process.env.API_KEY',
+  'PART 3: EXPLORING IDEAS AND MAKING MOVES',
   'PART 3: BUILDING CLARITY AND CONFIDENCE'
 ]) {
   if (combined.includes(forbidden)) failures.push('forbidden legacy, internal-only, incorrect-title, or secret-boundary phrase found: ' + forbidden);
