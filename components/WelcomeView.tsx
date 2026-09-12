@@ -19,7 +19,7 @@ export const WelcomeView: React.FC = () => {
 
       <section className="panel-platinum max-w-3xl mx-auto space-y-5">
         <p className="text-lg text-ctj-silver leading-relaxed">
-          Part 3 turns reasoning into movement. Across ten days, you will test arguments, evaluate evidence, separate correlation from causation, use small experiments to break indecision, learn from failure, and adapt ideas through action.
+          Part 3 integrates thinking with meaning. Across ten days, you will examine mindset, emotion, recurring scripts, decision clarity, self-observation, purpose, triggers, complex scenarios, and the choices that make intention visible.
         </p>
         <p className="text-ctj-muted leading-relaxed">
           The original curriculum is preserved, but the digital experience separates a focused core session from optional deeper work so you can engage without turning every day into a writing marathon.
