@@ -1,0 +1,38 @@
+name: CTJ Part 3 CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Runtime dependency audit
+        run: npm audit --omit=dev --audit-level=high
+
+      - name: Verify no client API key injection
+        run: |
+          if grep -R -n -E 'GEMINI_API_KEY|process\.env\.API_KEY' . --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.github --exclude=validateContent.mjs; then
+            echo "Client API-key reference detected."
+            exit 1
+          fi
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Full Part 3 validation
+        run: npm test
