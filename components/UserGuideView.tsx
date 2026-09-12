@@ -38,7 +38,7 @@ export const UserGuideView: React.FC = () => {
       </section>
 
       <div className="grid sm:grid-cols-2 gap-4">
-        <GuideCard icon={<Save />} title="Save and resume">Responses save to browser LocalStorage in this candidate build.</GuideCard>
+        <GuideCard icon={<Save />} title="Save and resume">Responses save to browser LocalStorage in this local version.</GuideCard>
         <GuideCard icon={<Mic />} title="Voice input">Optional browser dictation is available when the browser supports speech recognition.</GuideCard>
         <GuideCard icon={<Sparkles />} title="Thinking Partner">Local deterministic prompts can challenge your reasoning. They do not score intelligence or make conclusions for you.</GuideCard>
         <GuideCard icon={<Download />} title="Export">At completion, keep PDF, JSON, or TXT copies outside the browser.</GuideCard>
